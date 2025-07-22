@@ -1,0 +1,19 @@
+
+
+{% extends 'base.html' %}
+
+
+{% block contenido_cuerpo %}
+
+    <p>
+        <a href="{% url 'productos:path_listar_productos' %}"> ATRAS </a>
+        <h1>Detalle del producto{{producto.nombre}}</h1>
+        <div class="lista_productos">
+            <img src="{{producto.imagen.url}}">
+            <p><strong>PRECIO: </strong>{{producto.precio}}</p>
+            <p><strong>STOCK: </strong>{{producto.stock}}</p>
+        </div>
+    </p>   
+
+
+{% endblock contenido_cuerpo %}

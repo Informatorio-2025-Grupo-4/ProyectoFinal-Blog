@@ -1,0 +1,19 @@
+
+{% extends 'base.html' %}
+
+
+{% block contenido_cuerpo %}
+
+    <p>
+        <h1>
+            Modificar Producto {{producto.nombre}}
+        </h1>
+        <div>
+            <form method = "POST" enctype="multipart/form-data">{% csrf_token %}    <!-- Esto es obligatorio para el método POST. Es para la seguridad. Lo de enctype es para que podamos subir la imagen -->
+                {{form.as_p}}
+                <button type="submit">Modificar</button>
+            </form>
+        </div>
+    </p>
+
+{% endblock contenido_cuerpo %}

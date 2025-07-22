@@ -1,0 +1,24 @@
+
+
+{% extends 'base.html' %}
+
+{% block contenido_cuerpo %}
+
+    <p>
+        <h1> RUBROS </h1> 
+
+        <div class="lista_productos">
+			{% for r in rubros %}
+
+                <div>
+					<p>{{r.nombre}}</p>
+					<a href="{% url 'productos:path_filtro_rubro' r.pk %}">
+						<img src="{{ r.imagen.url }}" width=400 height="300">
+					</a>
+				</div>
+                    
+			{% endfor %}
+		</div>
+    </p>
+
+{% endblock contenido_cuerpo %}

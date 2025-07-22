@@ -1,0 +1,29 @@
+
+
+{% extends 'base.html' %}
+
+{% block contenido_cuerpo %}
+
+    <p>
+        <a href="{% url 'genericos:path_listar_rubros' %}"> ATRAS </a>
+        <h1> FILTRADO POR: {{nombre_rubro}} </h1>  
+
+        <div class="lista_productos">
+			{% for p in productos %}
+				<ul class="ul_productos">
+					<li><img src="{{p.imagen.url}}" width="300"></li>
+					<li>{{p.nombre}}</li>
+					<li>{{p.precio}}</li>
+					<li><a href="{% url 'productos:path_detalle_producto' p.pk %}">+detalle</a></li>
+					<li><a href="{% url 'productos:path_modificar_producto' p.pk %}">modificar</a></li>
+					<li><a href="{% url 'productos:path_borrar_producto' p.pk %}">borrar</a></li>
+				</ul>
+
+			{% endfor %}
+		</div>
+            
+    </p>
+
+{% endblock contenido_cuerpo %}
+
+

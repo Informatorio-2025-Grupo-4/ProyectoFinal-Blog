@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+
+{% block contenido_cuerpo %}
+
+    <p>     <!-- Este template se llama así porque por defecto django lo busca con este nombre. Se va a generar este template de confirmacion para borrar el producto -->
+        <h1>
+            Borrar Producto 
+        </h1>
+        <div class="">
+            <form method = "POST"> {% csrf_token %}    <!-- Esto es obligatorio para el método POST. Es para la seguridad. Lo de enctype es para que podamos subir la imagen -->
+                <p>Estas seguro de que queres borrar el producto: "{{ object }}"? </p>
+                {{ form }}
+                <input type="submit" value="CONFIRMAR"></button>
+                <a href="{% url 'productos:path_listar_productos' %}">CANCELAR</a>   <!-- Esto es un boton de cancelar el borrado del producto. lo unico que hace es mandarme al template anterior-->
+            </form>
+        </div>
+    </p>
+
+{% endblock contenido_cuerpo %}
+
+
+
+

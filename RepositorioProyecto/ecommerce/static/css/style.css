@@ -1,0 +1,116 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CUERPO GENERAL */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #1e1e2f;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.logo {
+    height: 60px;
+    object-fit: contain;
+}
+
+/* MENÚ */
+.nav-menu .ul-menu,
+.ul-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding: 0;
+}
+
+.ul-menu li {
+    display: inline;
+}
+
+.ul-menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.ul-menu li a:hover {
+    color: #f5c518;
+}
+
+/* CONTENIDO PRINCIPAL */
+.cuerpo {
+    padding: 50px 60px;
+}
+
+/* HOME */
+.home-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.home-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* PRODUCTOS */
+.lista_productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.ul_productos {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.ul_productos:hover {
+    transform: translateY(-5px);
+}
+
+.ul_productos li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
